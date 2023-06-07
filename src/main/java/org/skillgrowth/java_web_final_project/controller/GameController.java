@@ -22,7 +22,7 @@ public class GameController {
         return gameService.findAll();
     }
 
-    @PostMapping("/games")
+    @PostMapping("/")
     public void saveGame(@RequestBody Game game) {
         gameService.save(game);
     }
@@ -33,4 +33,8 @@ public class GameController {
     }
 
     @PutMapping("/{id}")
+    public void putGame(@PathVariable Long id, @RequestBody Game game) {
+        putGame(id, game);
+    }
+}
 
