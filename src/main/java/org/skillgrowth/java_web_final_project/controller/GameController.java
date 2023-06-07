@@ -8,6 +8,7 @@ import java.util.List;
 
 @RestController
 @ResponseBody
+@CrossOrigin
 @RequestMapping("/")
 public class GameController {
 
@@ -17,7 +18,7 @@ public class GameController {
         gameService = gameService1;
     }
 
-    @GetMapping
+    @GetMapping("/")
     public List<Game> findAll() {
         return gameService.findAll();
     }
@@ -37,4 +38,3 @@ public class GameController {
         putGame(id, game);
     }
 }
-
