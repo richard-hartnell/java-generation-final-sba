@@ -7,8 +7,8 @@ import org.springframework.web.bind.annotation.*;
 import java.util.List;
 
 @RestController
-@ResponseBody
 @CrossOrigin
+@ResponseBody
 @RequestMapping("/")
 public class GameController {
 
